@@ -1,0 +1,25 @@
+{
+  "model": "opusplan",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME/.claude/hooks/log_prompt.py\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME/.claude/hooks/stop_summarizer.py\""
+          }
+        ]
+      }
+    ]
+  }
+}
